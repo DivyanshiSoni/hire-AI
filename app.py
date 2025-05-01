@@ -79,13 +79,13 @@ class ResumeApp:
             st.session_state.is_admin = False
 
         self.pages = {
-            "🏠 HOME": self.render_home,
-            "🔍 RESUME ANALYZER": self.render_analyzer,
-            "📝 RESUME BUILDER": self.render_builder,
-            "📊 DASHBOARD": self.render_dashboard,
-            "🎯 JOB SEARCH": self.render_job_search,
-            "💬 FEEDBACK": self.render_feedback_page,
-            "ℹ️ ABOUT": self.render_about
+            "HOME": self.render_home,
+            "RESUME ANALYZER": self.render_analyzer,
+            "RESUME BUILDER": self.render_builder,
+            "DASHBOARD": self.render_dashboard,
+            "JOB SEARCH": self.render_job_search,
+            "FEEDBACK": self.render_feedback_page,
+            "ABOUT": self.render_about
         }
 
         # Initialize dashboard manager
@@ -477,7 +477,7 @@ class ResumeApp:
             st.markdown("""
             <p style='text-align: center;'>
                 Powered by <b>Streamlit</b> and <b>Google Gemini AI</b> | Developed by 
-                <a href="https://www.linkedin.com/in/patel-hetkumar-sandipbhai-8b110525a/" target="_blank" style='text-decoration: none; color: #FFFFFF'>
+                <a href="https://www.linkedin.com/" target="_blank" style='text-decoration: none; color: #FFFFFF'>
                     <b>Divyanshi Soni and Ritika Singh</b>
                 </a>
             </p>
@@ -532,7 +532,7 @@ class ResumeApp:
         """Render the dashboard page"""
         self.dashboard_manager.render_dashboard()
 
-        st.toast("Check out these repositories: [Awesome Hacking](https://github.com/Hunterdii/Awesome-Hacking)", icon="ℹ️")
+        st.toast("Check out these repositories: [Awesome Hacking](https://github.com/DivyanshiSoni/hire-AI)", icon="ℹ️")
 
 
     def render_empty_state(self, icon, message):
@@ -938,7 +938,7 @@ class ResumeApp:
                             st.success("✅ Resume generated successfully!")
 
                             # Show snowflake effect
-                            st.snow()
+                            # st.snow()
 
                             st.download_button(
                                 label="Download Resume 📥",
@@ -977,7 +977,7 @@ class ResumeApp:
                 print(f"Full traceback: {traceback.format_exc()}")
                 st.error(f"❌ Error preparing resume data: {str(e)}")
 
-        st.toast("Check out these repositories: [30-Days-Of-Rust](https://github.com/Hunterdii/30-Days-Of-Rust)", icon="ℹ️")
+        st.toast("Check out these repositories: [Hire-ai](https://github.com/DivyanshiSoni/hire-AI)", icon="ℹ️")
 
     def render_about(self):
         """Render the about page"""
@@ -1140,20 +1140,20 @@ class ResumeApp:
         # Profile Section
         st.markdown(f"""
             <div class="profile-section">
-                <img src="{image_base64 if image_base64 else 'https://avatars.githubusercontent.com/Hunterdii'}"
-                     alt="Het Patel"
+                <img src="{image_base64 if image_base64 else 'https://avatars.githubusercontent.com/DivyanshiSoni'}"
+                     alt="ritika"
                      class="profile-image"
-                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/Hunterdii';">
+                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/DivyanshiSoni';">
                 <h2 class="profile-name">Divyanshi Soni and Ritika Singh</h2>
                 <p class="profile-title">Full Stack Developer & AI/ML Enthusiast</p>
                 <div class="social-links">
-                    <a href="https://github.com/Hunterdii" class="social-link" target="_blank">
+                    <a href="https://github.com/DivyanshiSoni" class="social-link" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/patel-hetkumar-sandipbhai-8b110525a/" class="social-link" target="_blank">
+                    <a href="https://www.linkedin.com/in/" class="social-link" target="_blank">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:hunterdii9879@gmail.com" class="social-link" target="_blank">
+                    <a href="mailto:divyanshirss15ab@gmail.com" class="social-link" target="_blank">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -1215,7 +1215,7 @@ class ResumeApp:
             </div>
         """, unsafe_allow_html=True)
 
-        st.toast("Check out these repositories: [Iriswise](https://github.com/Hunterdii/Iriswise)", icon="ℹ️")
+        
 
     def render_analyzer(self):
         """Render the resume analyzer page"""
@@ -1347,7 +1347,7 @@ class ResumeApp:
                             return
 
                         # Show snowflake effect
-                        st.snow()
+                        # st.snow()
 
                         # Save resume data to database
                         resume_data = {
@@ -2391,7 +2391,7 @@ class ResumeApp:
                                         }
                                     )
                                 # show snowflake effect
-                                st.snow()
+                                # st.snow()
 
                                 # Complete the progress
                                 progress_bar.progress(100)
@@ -2771,8 +2771,7 @@ class ResumeApp:
                             import traceback as tb
                             st.code(tb.format_exc())
 
-        st.toast("Check out these repositories: [Awesome Java](https://github.com/Hunterdii/Awesome-Java)", icon="ℹ️")
-
+        
 
     def render_home(self):
         apply_modern_styles()
@@ -2806,7 +2805,7 @@ class ResumeApp:
         
         st.markdown('</div>', unsafe_allow_html=True)
         
-        st.toast("Check out these repositories: [AI-Nexus(AI/ML)](https://github.com/Hunterdii/AI-Nexus)", icon="ℹ️")
+        st.toast("Check out these repositories: [Hire-AI](https://github.com/DivyanshiSoni/hire-AI)")
 
         # Call-to-Action with Streamlit navigation
         col1, col2, col3 = st.columns([1, 1, 1])
@@ -2823,8 +2822,7 @@ class ResumeApp:
         """Render the job search page"""
         render_job_search()
 
-        st.toast("Check out these repositories: [GeeksforGeeks-POTD](https://github.com/Hunterdii/GeeksforGeeks-POTD)", icon="ℹ️")
-
+        
 
     def render_feedback_page(self):
         """Render the feedback page"""
@@ -2848,34 +2846,12 @@ class ResumeApp:
         with stats_tab:
             feedback_manager.render_feedback_stats()
 
-        st.toast("Check out these repositories: [TryHackMe Free Rooms](https://github.com/Hunterdii/tryhackme-free-rooms)", icon="ℹ️")
+        
 
 
     def show_repo_notification(self):
         message = """
-<div style="background-color: #1e1e1e; border-radius: 10px; border: 1px solid #4b6cb7; padding: 10px; margin: 10px 0; color: white;">
-    <div style="margin-bottom: 10px;">Check out these other repositories:</div>
-    <div style="margin-bottom: 5px;"><b>Hacking Resources:</b></div>
-    <ul style="margin-top: 0; padding-left: 20px;">
-        <li><a href="https://github.com/Hunterdii/tryhackme-free-rooms" target="_blank" style="color: #4CAF50;">TryHackMe Free Rooms</a></li>
-        <li><a href="https://github.com/Hunterdii/Awesome-Hacking" target="_blank" style="color: #4CAF50;">Awesome Hacking</a></li>
-    </ul>
-    <div style="margin-bottom: 5px;"><b>Programming Languages:</b></div>
-    <ul style="margin-top: 0; padding-left: 20px;">
-        <li><a href="https://github.com/Hunterdii/Awesome-Java" target="_blank" style="color: #4CAF50;">Awesome Java</a></li>
-        <li><a href="https://github.com/Hunterdii/30-Days-Of-Rust" target="_blank" style="color: #4CAF50;">30 Days Of Rust</a></li>
-    </ul>
-    <div style="margin-bottom: 5px;"><b>Data Structures & Algorithms:</b></div>
-    <ul style="margin-top: 0; padding-left: 20px;">
-        <li><a href="https://github.com/Hunterdii/GeeksforGeeks-POTD" target="_blank" style="color: #4CAF50;">GeeksforGeeks POTD</a></li>
-        <li><a href="https://github.com/Hunterdii/Leetcode-POTD" target="_blank" style="color: #4CAF50;">Leetcode POTD</a></li>
-    </ul>
-    <div style="margin-bottom: 5px;"><b>AI/ML Projects:</b></div>
-    <ul style="margin-top: 0; padding-left: 20px;">
-        <li><a href="https://github.com/Hunterdii/AI-Nexus" target="_blank" style="color: #4CAF50;">AI Nexus</a></li>
-    </ul>
-    <div style="margin-top: 10px;">If you find this project helpful, please consider ⭐ starring the repo!</div>
-</div>
+
 """
         st.sidebar.markdown(message, unsafe_allow_html=True)
 
